@@ -1,11 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Turbopackのエラーを回避するためにwebpackを明示的に使用
-  webpack: (config) => {
-    return config;
+  // Turbopackのエラーを消すための魔法の1行
+  experimental: {
+    turbopack: {},
   },
-  // 前回のセキュリティ/ビルド設定も維持
+  // セキュリティやESLintのエラーで止まらないようにする
   eslint: {
     ignoreDuringBuilds: true,
   },
