@@ -1,11 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Turbopackのエラーを消すための魔法の1行
+  // Tailwind v4 を Turbopack で動作させるための設定
   experimental: {
-    turbopack: {},
+    turbo: {
+      rules: {
+        "*.css": ["postcss-loader"],
+      },
+    },
   },
-  // セキュリティやESLintのエラーで止まらないようにする
   eslint: {
     ignoreDuringBuilds: true,
   },
