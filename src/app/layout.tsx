@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "愛犬の健康管理ログ",
   // ここから追加
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon-32x32.png",
     apple: "/icon-192x192.png",
   },
   manifest: "/manifest.json",
